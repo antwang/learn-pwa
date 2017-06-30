@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .app.app__layout
+      header
+        span.header__icon
+          svg(class="menu__icon no--select" width="24px" height="24px" viewBox="0 0 48 48" fill="#fff")
+            path(d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z")
+        span(class="header__title no--select") PWA - #{title}
+      .menu
+        .menu__header
+        ul.menu__list
+          li
+            a(href="/") home
+          li
+            a(href="latest") latest
+      .menu__overlay
+      block content
+      // Toast msg's
+      .toast__container
+    script(src="/js/app.js")
+    script(src="/js/toast.js")
+    script(src="/js/menu.js")
+    script(src="/js/offline.js")
+    block script

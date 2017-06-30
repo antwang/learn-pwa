@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  section.card__container
+    h2.title 最新提交
+    .container
+        section.card.first
+        section.card.second
+        section.card.third
+        section.card.fourth
+        section.card.fifth
+    .loader
+        svg(viewbox='0 0 32 32' width='32' height='32')
+            circle#spinner(cx='16' cy='16' r='14' fill='none')
+block script
+    script(src="/js/latest.js")
+  
